@@ -54,10 +54,10 @@ resource "azurerm_linux_function_app" "fa" {
 
   app_settings = {
 
-    azure-tenant-id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure-tenant-id.versionless_id})"
-    defender-app-id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender-app-id.versionless_id})"
-    sumo-collector-url       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo-collector-url.versionless_id})"
-    comm-service-conn-string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm-service-conn-string.versionless_id})"
+    azure_tenant_id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure_tenant_id.versionless_id})"
+    defender_app_id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_id.versionless_id})"
+    sumo_collector_url       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo_collector_url.versionless_id})"
+    comm_service_conn_string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
 
   }
 
