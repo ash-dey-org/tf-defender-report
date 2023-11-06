@@ -18,10 +18,12 @@ variable "company" {
   description = "The company name"
 }
 
+/*
 variable "location" {
   type        = string
   description = "Location to deploy communication resource"
 }
+*/
 
 variable "kvname" {
   type        = string
