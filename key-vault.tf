@@ -15,7 +15,7 @@ resource "azurerm_role_assignment" "kv" {
   scope                = data.azurerm_key_vault.vault.id
   role_definition_name = "Key Vault Secrets User"
   principal_id         = azurerm_linux_function_app.fa.identity[0].principal_id
-  depends_on           = [ azurerm_linux_function_app.fa ]
+  depends_on           = [azurerm_linux_function_app.fa]
 }
 
 
