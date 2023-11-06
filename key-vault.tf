@@ -19,22 +19,22 @@ resource "azurerm_role_assignment" "kv" {
 }
 
 
-data "azurerm_key_vault_secret" "azure-tenant-id" {
+data "azurerm_key_vault_secret" "azure_tenant_id" {
   name         = "azure-tenant-id"
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
-data "azurerm_key_vault_secret" "defender-app-id" {
+data "azurerm_key_vault_secret" "defender_app_id" {
   name         = "defender-app-id"
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
-data "azurerm_key_vault_secret" "sumo-collector-url" {
+data "azurerm_key_vault_secret" "sumo_collector_url" {
   name         = "sumo-collector-url"
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
-data "azurerm_key_vault_secret" "comm-service-conn-string" {
+data "azurerm_key_vault_secret" "comm_service_conn_string" {
   name = "comm-service-conn-string"
   # Azure communication services connection string
   key_vault_id = data.azurerm_key_vault.vault.id
