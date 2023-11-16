@@ -54,12 +54,12 @@ resource "azurerm_linux_function_app" "fa" {
 
   app_settings = {
 
-    azure_tenant_id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure_tenant_id.versionless_id})"
-    defender_app_id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_id.versionless_id})"
-    defender_app_secret      = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_secret.versionless_id})"
-    sumo_collector_url       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo_collector_url.versionless_id})"
-    comm_service_conn_string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
-    WEBSITE_TIME_ZONE        = "AU"
+    azure_tenant_id                     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure_tenant_id.versionless_id})"
+    defender_app_id                     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_id.versionless_id})"
+    defender_app_secret                 = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_secret.versionless_id})"
+    sumo_collector_url                  = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo_collector_url.versionless_id})"
+    comm_service_conn_string            = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
+    WEBSITE_TIME_ZONE                   = "AU"
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
 
   }
