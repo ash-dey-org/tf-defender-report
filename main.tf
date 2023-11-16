@@ -48,7 +48,7 @@ resource "azurerm_linux_function_app" "fa" {
     type = "SystemAssigned"
   }
 
-  virtual_network_subnet_id = azurerm_subnet.fn-subnet-fa.id
+  # virtual_network_subnet_id = azurerm_subnet.fn-subnet-fa.id
 
   # depends_on = [ azurerm_windows_function_app.azurerm_windows_function_app.ingester_app ]
 
