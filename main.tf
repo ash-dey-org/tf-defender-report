@@ -79,19 +79,21 @@ resource "azurerm_linux_function_app" "fa" {
     }
 
     # vnet_route_all_enabled = true
-
+  */
     ip_restriction {
-      name        = "azure-front-door-restriction"
-      priority    = 100
-      service_tag = "AzureFrontDoor.Backend"
+      name        = "azure-devops-service-tag"
+      priority    = 200
+      service_tag = "AzureDevOps"
+
+      /*
       headers {
         x_azure_fdid = [azurerm_cdn_frontdoor_profile.fp.resource_guid]
 
       }
-
+      */
       action = "Allow"
     }
-*/
+
     dynamic "ip_restriction" {
       for_each = var.az_devops_ip
       content {
