@@ -31,7 +31,7 @@ resource "azurerm_storage_account_network_rules" "asanr" {
 }
 */
 
-# Private container within above storage account (multipurpose - for JSON, images, thumbnails)
+# This is only needed if we want to store some data to blob storage, otherwise can be skipped for function normal operation
 resource "azurerm_storage_container" "secure" {
   name                  = "vsad-${var.env}-${lower(var.proj)}-asc"
   storage_account_name  = azurerm_storage_account.sa.name
