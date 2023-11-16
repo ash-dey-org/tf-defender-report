@@ -56,13 +56,13 @@ resource "azurerm_private_endpoint" "pe-fa" {
     subresource_names              = ["sites"]
   }
 */
-  /*
+/*
   private_dns_zone_group {
     name                 = "ingester-${var.env}-pvtdns"
     private_dns_zone_ids = [azurerm_private_dns_zone.apdz.id]
   }
   */
-  /*
+/*
   depends_on = [
     azurerm_linux_function_app.fa
   ]
@@ -83,13 +83,13 @@ resource "azurerm_private_endpoint" "pe-str" {
     subresource_names              = ["blob"]
   }
   */
-  /*
+/*
   private_dns_zone_group {
     name                 = "str-${var.env}-pvtdns"
     private_dns_zone_ids = [azurerm_private_dns_zone.apdz.id]
   }
   */
-  /*
+/*
   depends_on = [
     azurerm_storage_account.sa
   ]
