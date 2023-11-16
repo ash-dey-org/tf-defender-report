@@ -38,7 +38,7 @@ resource "azurerm_subnet" "str-subnet" {
   address_prefixes     = var.str_address_space
 }
 
-*/
+
 
 # Private endpoint for main function app
 
@@ -55,13 +55,14 @@ resource "azurerm_private_endpoint" "pe-fa" {
     is_manual_connection           = false
     subresource_names              = ["sites"]
   }
-
+*/
   /*
   private_dns_zone_group {
     name                 = "ingester-${var.env}-pvtdns"
     private_dns_zone_ids = [azurerm_private_dns_zone.apdz.id]
   }
   */
+  /*
   depends_on = [
     azurerm_linux_function_app.fa
   ]
@@ -81,16 +82,19 @@ resource "azurerm_private_endpoint" "pe-str" {
     is_manual_connection           = false
     subresource_names              = ["blob"]
   }
+  */
   /*
   private_dns_zone_group {
     name                 = "str-${var.env}-pvtdns"
     private_dns_zone_ids = [azurerm_private_dns_zone.apdz.id]
   }
   */
+  /*
   depends_on = [
     azurerm_storage_account.sa
   ]
 }
+
 
 # private DNS for storage
 resource "azurerm_private_dns_zone" "apdz-str" {
@@ -136,3 +140,4 @@ resource "azurerm_private_dns_a_record" "apdar-ingester" {
   ttl                 = 300
   records             = [azurerm_private_endpoint.pe-fa.custom_dns_configs[0].ip_addresses[0]]
 }
+*/

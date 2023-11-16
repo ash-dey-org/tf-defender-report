@@ -17,6 +17,8 @@ resource "azurerm_storage_account" "sa" {
   */
 }
 
+/*
+
 # Create a list of IP rules based on the outbound IP addresses
 resource "azurerm_storage_account_network_rules" "asanr" {
   storage_account_id = azurerm_storage_account.sa.id
@@ -27,6 +29,7 @@ resource "azurerm_storage_account_network_rules" "asanr" {
   # bypass = ["Metrics"]
   bypass = ["AzureServices"]
 }
+*/
 
 # Private container within above storage account (multipurpose - for JSON, images, thumbnails)
 resource "azurerm_storage_container" "secure" {
