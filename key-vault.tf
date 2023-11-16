@@ -29,6 +29,10 @@ data "azurerm_key_vault_secret" "defender_app_id" {
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
+data "azurerm_key_vault_secret" "defender_app_secret" {
+  name         = "defender-app-secret"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
 data "azurerm_key_vault_secret" "sumo_collector_url" {
   name         = "sumo-collector-url"
   key_vault_id = data.azurerm_key_vault.vault.id
