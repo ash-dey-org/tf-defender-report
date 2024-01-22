@@ -68,7 +68,7 @@ resource "azurerm_linux_function_app" "fa" {
 
     application_insights_key               = azurerm_application_insights.insights.instrumentation_key
     application_insights_connection_string = azurerm_application_insights.insights.connection_string
-    # always_on                              = true
+    always_on                              = true
     application_stack {
       python_version = "3.10"
     }
