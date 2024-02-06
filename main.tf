@@ -60,6 +60,10 @@ resource "azurerm_linux_function_app" "fa" {
     sumo_collector_url       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo_collector_url.versionless_id})"
     comm_service_conn_string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
     kv_url                   = "https://${var.env}-${var.region}-${var.company}-kv-${var.kvname}.vault.azure.net"
+    sharepoint_url           = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_url.versionless_id})"
+    sharepoint_dir           = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_dir.versionless_id})"
+    sharepoint_file_path     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path.versionless_id})"
+    cert_name                = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.cert_name.versionless_id})"
     # WEBSITE_TIME_ZONE                   = "AU"
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
 
