@@ -44,4 +44,24 @@ data "azurerm_key_vault_secret" "comm_service_conn_string" {
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
+data "azurerm_key_vault_secret" "sharepoint_url" {
+  name         = "sharepoint-url"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "sharepoint_dir" {
+  name         = "sharepoint-dir"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "sharepoint_file_path" {
+  name         = "sharepoint-file-path"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "cert_name" {
+  name         = "cert-name"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
 
