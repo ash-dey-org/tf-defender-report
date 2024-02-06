@@ -59,6 +59,7 @@ resource "azurerm_linux_function_app" "fa" {
     defender_app_secret      = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_secret.versionless_id})"
     sumo_collector_url       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo_collector_url.versionless_id})"
     comm_service_conn_string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
+    kv_url                   = "https://${var.env}-${var.region}-${var.company}-kv-${var.kvname}.vault.azure.net"
     # WEBSITE_TIME_ZONE                   = "AU"
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
 
