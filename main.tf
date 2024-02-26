@@ -64,7 +64,8 @@ resource "azurerm_linux_function_app" "fa" {
     sharepoint_dir           = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_dir.versionless_id})"
     sharepoint_file_path     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path.versionless_id})"
     cert_name                = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.cert_name.versionless_id})"
-    # WEBSITE_TIME_ZONE                   = "AU"
+    # WEBSITE_TIME_ZONE      = "AU"
+    WEBSITE_RUN_FROM_PACKAGE            = 1
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
 
   }
