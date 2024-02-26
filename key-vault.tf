@@ -7,6 +7,10 @@ resource "azurerm_key_vault_access_policy" "keyvault_policy_cms" {
   secret_permissions = [
     "Get"
   ]
+  certificate_permissions = [
+    "Backup", "Create", "Delete", "DeleteIssuers", "Get", "GetIssuers", "Import", "List", "ListIssuers", "ManageContacts", "ManageIssuers", "Recover", "Restore", "SetIssuers", "Update"
+  ]
+
 }
 
 /*
