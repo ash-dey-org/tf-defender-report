@@ -54,16 +54,21 @@ resource "azurerm_linux_function_app" "fa" {
 
   app_settings = {
 
-    azure_tenant_id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure_tenant_id.versionless_id})"
-    defender_app_id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_id.versionless_id})"
-    defender_app_secret      = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_secret.versionless_id})"
-    sumo_collector_url       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo_collector_url.versionless_id})"
-    comm_service_conn_string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
-    kv_url                   = "https://${var.env}-${var.region}-${var.company}-kv-${var.kvname}.vault.azure.net"
-    sharepoint_url           = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_url.versionless_id})"
-    sharepoint_dir           = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_dir.versionless_id})"
-    sharepoint_file_path     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path.versionless_id})"
-    cert_name                = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.cert_name.versionless_id})"
+    azure_tenant_id               = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure_tenant_id.versionless_id})"
+    defender_app_id               = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_id.versionless_id})"
+    defender_app_secret           = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.defender_app_secret.versionless_id})"
+    sumo_collector_url            = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo_collector_url.versionless_id})"
+    comm_service_conn_string      = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
+    kv_url                        = "https://${var.env}-${var.region}-${var.company}-kv-${var.kvname}.vault.azure.net"
+    sharepoint_url                = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_url.versionless_id})"
+    sharepoint_dir                = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_dir.versionless_id})"
+    sharepoint_file_path          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path.versionless_id})"
+    sharepoint_file_path_summary  = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path_summary.versionless_id})"
+    sharepoint_file_path_critical = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path_critical.versionless_id})"
+    sharepoint_file_path_high     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path_high.versionless_id})"
+    sharepoint_file_path_medium   = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path_medium.versionless_id})"
+    sharepoint_file_path_low      = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sharepoint_file_path_low.versionless_id})"
+    cert_name                     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.cert_name.versionless_id})"
     # WEBSITE_TIME_ZONE      = "AU"
     WEBSITE_RUN_FROM_PACKAGE            = 1
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
