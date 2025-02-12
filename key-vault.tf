@@ -63,6 +63,31 @@ data "azurerm_key_vault_secret" "sharepoint_file_path" {
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
+data "azurerm_key_vault_secret" "sharepoint_file_path_summary" {
+  name         = "sharepoint-file-path-summary"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "sharepoint_file_path_critical" {
+  name         = "sharepoint-file-path-critical"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "sharepoint_file_path_high" {
+  name         = "sharepoint-file-path-high"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "sharepoint_file_path_medium" {
+  name         = "sharepoint-file-path-medium"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "sharepoint_file_path_low" {
+  name         = "sharepoint-file-path-low"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
 data "azurerm_key_vault_secret" "cert_name" {
   name         = "cert-name"
   key_vault_id = data.azurerm_key_vault.vault.id
